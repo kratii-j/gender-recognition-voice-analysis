@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gender Recognition Using Voice</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero card">
+        <p class="eyebrow">Voice Analysis</p>
+        <h1>Gender Recognition</h1>
+        <p class="subtle">Deep-learning voice classification with microphone capture, WAV upload, and saved prediction history.</p>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Overview</h2>
+          <div id="overviewGrid" class="stats-grid">
+            <div class="stat-box">
+              <span>Total predictions</span>
+              <strong id="totalPredictions">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>Average confidence</span>
+              <strong id="avgConfidence">0%</strong>
+            </div>
+            <div class="stat-box">
+              <span>Male majority</span>
+              <strong id="maleCount">0</strong>
+            </div>
+            <div class="stat-box">
+              <span>Female majority</span>
+              <strong id="femaleCount">0</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Insights</h2>
+          <div id="insightsBox" class="insights-list">
+            <p class="subtle">Insights will appear after predictions are saved.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Inference</h2>
+          <div class="actions">
+            <button id="recordBtn" class="primary">Start 3s Recording</button>
+            <label class="upload">
+              <input id="fileInput" type="file" accept=".wav,audio/wav" />
+              Upload WAV
+            </label>
+          </div>
+          <p id="statusText" class="subtle">Ready.</p>
+        </article>
+
+        <article class="card">
+          <h2>Latest Result</h2>
+          <div id="resultBox" class="result empty">No prediction yet.</div>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="history-head">
+          <h2>Saved History</h2>
+          <button id="refreshBtn">Refresh</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>File</th>
+                <th>Label</th>
+                <th>Confidence</th>
+                <th>Pitch</th>
+                <th>Duration</th>
+              </tr>
+            </thead>
+            <tbody id="historyBody">
+              <tr><td colspan="6">Loading...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+  </body>
+  </html>
