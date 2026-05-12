@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Gender Recognition Using Voice
 
 This project is now a real deep-learning voice-classification app:
@@ -208,7 +207,3 @@ The project successfully develops a voice-based gender recognition system using 
 A calibration mechanism based on pitch is applied to improve real-time prediction reliability and handle borderline cases. The system provides accurate and fast results through a user-friendly interface.
 
 Overall, the project demonstrates an effective combination of deep learning and domain knowledge for practical voice analysis applications.
-
-Centre for Artificial Intelligence  
-Madhav Institute of Technology & Science, Gwalior
->>>>>>> 5937dca876f318bd78b0610d363bc653e21f86c8
